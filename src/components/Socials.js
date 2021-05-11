@@ -1,14 +1,14 @@
 import { Nav, ButtonGroup } from 'react-bootstrap';
 
 
-const Socials = () => {
+const Socials = ({ links }) => {
 
     const listItems = links.map((link) => 
-                <a href={link.url}>{link.icon}</a>);
+                <a className='mx-2' href={link.url}>{link.icon}</a>);
 
     return (
             <Nav className='justify-content-center'>
-                <ButtonGroup>{listItems}</ButtonGroup>
+                <h2><ButtonGroup>{listItems}</ButtonGroup></h2>
             </Nav>
     )
 }
