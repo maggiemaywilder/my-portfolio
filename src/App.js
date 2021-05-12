@@ -4,6 +4,8 @@ import Header from './components/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FaTwitterSquare, FaLinkedin, FaInstagramSquare, FaStackOverflow, FaGithubSquare } from 'react-icons/fa';
 import Footer from './components/Footer';
+import Body from './components/Body';
+import { Container } from 'react-bootstrap';
 
 
 
@@ -85,18 +87,18 @@ function App() {
   
 
   return (
-    <div className='App'>
+    <Container fluid className='App'>
       <header >
         <Header title='Margaret Wilder' nickname='Maggie may' pronouns="(she/her)" links={links} />  
       </header>
       <body>
-
+        <Body />
       </body>
       <footer>
         <Footer />
       </footer>
       
-    </div>
+    </Container>
   );
 }
 
