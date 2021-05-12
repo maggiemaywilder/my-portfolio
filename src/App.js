@@ -92,7 +92,7 @@ function App() {
         <Header title='Margaret Wilder' nickname='Maggie may' pronouns="(she/her)" links={links} />  
       </header>
       <body>
-        <Body />
+        <Body projects={projects} />
       </body>
       <footer>
         <Footer />
