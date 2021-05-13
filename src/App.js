@@ -56,6 +56,7 @@ function App() {
       title: 'Littles login',
       description: 'Simple interface for adding to an application to allow parents to help their littlest users to start learning about device privacy and security with a color pattern password login.',
       repo: `https://github.com/maggiemaywilder/littlesLogin`,
+      deployed: ' ',
       image: `${littlesLogin}`
     },
     {
@@ -70,8 +71,8 @@ function App() {
       id: 4,
       title: 'ReadMe generator: commandline app',
       description: 'A commandline application for generating the basic structure of a ReadME file.',
-      deployed: `https://calm-hamlet-80672.herokuapp.com`,
-      repo: null,
+      deployed: `https://github.com/maggiemaywilder/comprehensiveReadMeCreator`,
+      repo: ' ',
       image: `${ReadMeScreengrab}`
     },
     {
