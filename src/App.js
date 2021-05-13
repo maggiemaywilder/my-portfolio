@@ -4,12 +4,21 @@ import Header from './components/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FaTwitterSquare, FaLinkedin, FaInstagramSquare, FaStackOverflow, FaGithubSquare } from 'react-icons/fa';
 import Footer from './components/Footer';
-import Body from './components/Body';
+import Projects from './components/Projects';
 import { Container } from 'react-bootstrap';
-
+import BurgerTime from './assets/BurgerTime.png';
+import codeQuiz from './assets/codeQuiz.png';
+import datePlanner from './assets/datePlanner.png';
+import dayPlan from './assets/dayPlan.png';
+import littlesLogin from './assets/littlesLogin.png';
+import ReadMeScreengrab from './assets/ReadMeScreengrab.png';
+import routinify from './assets/routinify.png';
+import profile from './assets/profile.png';
 
 
 function App() {
+  const pic = profile;
+
   const [links, setLinks] = useState([
     {
         url: 'https://github.com/maggiemaywilder',
@@ -35,52 +44,59 @@ function App() {
 
   const [projects, setProjects] = useState([
     {
+      id: 1,
       title: 'Routinify: Digital whiteboard app',
       description: 'Digital group task and household management app using JavaScript, MySQL, Node, Express, Handlebars, and Sequelize.',
       deployed: `https://routinify.herokuapp.com/`,
       repo: `https://github.com/Keaton-Brewster/project-2`,
-      image: '../public/assets/task.PNG'
+      image: `${routinify}`
     },
     {
+      id: 2,
       title: 'Littles login',
       description: 'Simple interface for adding to an application to allow parents to help their littlest users to start learning about device privacy and security with a color pattern password login.',
       repo: `https://github.com/maggiemaywilder/littlesLogin`,
-      image: '../public/assets/screencapture- interface with name and password entered.png'
+      image: `${littlesLogin}`
     },
     {
+      id: 3,
       title: 'Burger Grubbing: the burger logger',
       description: 'A burger logger with MySQL, Node, Express, handlebars and a homemade ORM.',
       deployed: `https://calm-hamlet-80672.herokuapp.com`,
       repo: `https://github.com/maggiemaywilder/burgerGrubbing`,
-      image: '../public/assets/BurgerTimeScreenshot.png'
+      image: `${BurgerTime}`
     },
     {
+      id: 4,
       title: 'ReadMe generator: commandline app',
       description: 'A commandline application for generating the basic structure of a ReadME file.',
       deployed: `https://calm-hamlet-80672.herokuapp.com`,
-      repo: ``,
-      image: '../public/assets/ReadMeScreengrab.png'
+      repo: null,
+      image: `${ReadMeScreengrab}`
     },
     {
+      id: 5,
       title: 'Date Planning Web App',
       description: 'Provides a single location to locate events in a location, search restaurant options in the area, and check the weather when it is time to get ready for your event. Simplifies date or outing planning by bringing multiple elements into one site.',
       deployed: `https://justrait.github.io/TeamProject1`,
       repo: `https://github.com/JuStrait/TeamProject1/`,
-      image: '../public/assets/screencapture-justrait-github-io-TeamProject1-event-html-2021-02-04-12_45_56.png'
+      image: `${datePlanner}`
     },
     {
+      id: 6,
       title: 'Coding Quiz',
       description: 'Simple online quiz to test coding knowledge.',
       deployed: `https://maggiemaywilder.github.io/codeQuizWebAPIs`,
       repo: `https://github.com/maggiemaywilder/codeQuizWebAPIs`,
-      image: '../public/assets/anotherQuestion.png'
+      image: `${codeQuiz}`
     },
     {
+      id: 7,
       title: 'Day Planner',
       description: `Basic day planner to save a day's appointments hour-by-hour`,
       deployed: `https://maggiemaywilder.github.io/dayPlanner`,
       repo: `https://github.com/maggiemaywilder/dayPlanner`,
-      image: '../public/assets/screencapture.png'
+      image: `${dayPlan}`
     }
   ])
 
@@ -89,12 +105,13 @@ function App() {
   return (
     <Container fluid className='App'>
       <header >
-        <Header title='Margaret Wilder' nickname='Maggie may' pronouns="(she/her)" links={links} />  
+
+        <Header title='Margaret Wilder' nickname='Maggie may' pronouns="(she/her)" links={links} pic={pic} />  
       </header>
       <body>
-        <Body projects={projects} />
+        <Projects projects={projects} />
       </body>
-      <footer>
+      <footer className='fixed-bottom'>
         <Footer />
       </footer>
       

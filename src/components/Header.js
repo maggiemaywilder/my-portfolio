@@ -1,5 +1,6 @@
 import { Jumbotron, Container } from 'react-bootstrap';
 import Socials from './Socials';
+import Pic from './Pic';
 
 
 const Header = (props) => {
@@ -7,6 +8,8 @@ const Header = (props) => {
 
     return (
         <Jumbotron style={{ backgroundColor: 'midnightblue' }} fluid className='mb-0'>
+            <Pic alt='Maggie may' pic={props.pic} />
+
             <Container>
                 <h1 style={{ color: 'white' }}>{props.title}</h1>
                 <small className="text-muted">{props.nickname} {props.pronouns}</small>
