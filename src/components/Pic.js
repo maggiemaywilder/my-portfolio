@@ -2,7 +2,7 @@
 
 const Pic = ({ pic, alt }) => {
     return (
-        <div   >
+        <div>
             <img className='rounded' id='myPic' src={pic} alt={alt}/>
         </div>
     )

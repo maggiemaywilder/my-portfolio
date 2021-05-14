@@ -23,7 +23,7 @@ const Projects = ({ projects }) => {
                 </Card.Body>    
                 <Card.Body>
                 <Card.Link href={project.repo}>Github</Card.Link>
-                {isDeployed != ' ' &&
+                {isDeployed !== ' ' &&
                     <Card.Link href={project.deployed}>Site</Card.Link>
                 }
                 </Card.Body>
