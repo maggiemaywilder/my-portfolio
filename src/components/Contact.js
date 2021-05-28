@@ -1,30 +1,21 @@
 import Pic from './Pic';
-import { Form, Button, Row } from 'react-bootstrap';
+import { Form, Row } from 'react-bootstrap';
+import { IoIosConstruct } from 'react-icons/io';
 
 const Contact = ({ alt, pic }) => {
+
+    
+
+    
     return (
-        <div>
+        <div className="justify-content-center">
             <Form className='mx-auto' >
-                <Row className='my-5'>
+                <Row className='my-5 text-center'>
                     <Pic alt={alt} pic={pic}  />  
                 </Row>
+                <Row className="text-center"><h1>{IoIosConstruct}</h1></Row>
                 <Row className='text-center'>
-                    <Form.Group>
-                        <Form.Label>Name</Form.Label>
-                        <Form.Control type='text' placeholder='Enter your name' />
-                    </Form.Group>
-                    <Form.Group>
-                        <Form.Label>Email address</Form.Label>
-                        <Form.Control type='email' placeholder='Enter email' />
-                    </Form.Group>
-                    <Form.Group>
-                        <Form.Label>Message</Form.Label>
-                        <Form.Control type='textarea' rows={4} />
-                    </Form.Group>
-
-                </Row>
-                <Row >
-                    <Button variant="primary" type="submit" className='mb-2 mx-auto'>Submit</Button>    
+                    <h3>Please feel free to reach out via email at <a href="maggiemaywilder@gmail.com">maggiemaywilder@gmail.com</a> or through  any of the methods linked at the top of the page while I construct a contact form.</h3>
                 </Row>
               
             </Form>

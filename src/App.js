@@ -17,6 +17,7 @@ import profile from './assets/profile.png';
 import About from './components/About';
 import Contact from './components/Contact';
 
+
 function App() {
   const pic = profile;
 
@@ -125,6 +126,7 @@ function App() {
   ])
 
 
+
   return (
     <Container fluid className='App'>
       <header >
@@ -136,11 +138,11 @@ function App() {
           <Projects projects={projects} />  
         </Row>
         <Row style={{ backgroundColor: 'antiquewhite' }} className='justify-content-center'>
-          <Col className='col-2 text-center' >
+          <Col className='col-4 text-center' >
             <Contact alt='Maggie may' pic={pic} />
             
           </Col>
-          <Col className='col-8' ><About title='About Me' paragraphs={paragraphs}/></Col>
+          <Col className='col-6' ><About title='About Me' paragraphs={paragraphs}/></Col>
         </Row>
         
       </body>
