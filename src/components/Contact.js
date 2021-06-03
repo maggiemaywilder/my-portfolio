@@ -8,7 +8,7 @@ const Contact = ({ alt, pic }) => {
     function sendEmail(e) {
         e.preventDefault();
     
-        emailjs.sendForm('service_nze5rd3', 'template_7pykemu', e.target, 'user_zjYVrvloVpN8fVQ6CAnIM')
+        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID')
           .then((result) => {
               console.log(result.text);
           }, (error) => {
